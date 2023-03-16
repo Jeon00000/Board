@@ -9,6 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
   <link rel="stylesheet" href="2main.css">
+  <script src="2main.js"></script>
 
 </head>
 
@@ -189,50 +190,6 @@
   </form>
 
 
-
-  <script>
-    // 섬머노트 스크립트
-    $(document).ready(function () {
-
-      $('#summernote').summernote({
-        placeholder: '내용을 입력하세요',
-        height: 200,
-        toolbar: [
-          ['fontname', ['fontname']],
-          ['fontsize', ['fontsize']],
-          ['style', ['style']],
-          ['font', ['bold', 'underline', 'clear']],
-          ['color', ['color']],
-          ['para', ['ul', 'ol', 'paragraph']],
-        ],
-        fontNames: ['맑은 고딕', '궁서', '굴림체', '굴림', '돋움체', '바탕체'],
-        fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '24', '28', '30', '36', '50']
-      });
-
-
-      // 로그인 스크립트
-
-      $('.test').click(function () {
-        $('#logpop').addClass('show');
-      });
-      $('body').click(function (event) {
-        console.log(event.target);
-        // 테스트중
-        if (event.target == this) {
-          $(".login-popup").removeClass('show');
-
-        }
-      });
-
-
-    });//jq
-
-
-
-
-
-
-  </script>
 </body>
 
 </html>
