@@ -1,0 +1,305 @@
+*{box-sizing: border-box;}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+li{
+    list-style-type: none;
+}
+
+body{
+    background-color: #fff;
+    color:#000;
+    margin: 0 auto;
+    padding: 0;
+    width: 1200px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/***** header *****/
+/* LOGO */
+.logo{
+    display: flex;
+}
+.logo>p{
+    font-size: 44px;
+    font-weight: 900;
+    margin: 30px 10px 20px 10px;
+    
+}
+.logo p>span.a{
+    color: #006940;
+}
+.logo p>span.b{
+    color:#7CC242;
+}
+
+/* NAME */
+.name{
+    margin-top: 40px;
+    padding: 0;
+}
+
+.name .kr{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.name .en{
+    margin: 0;
+    padding: 0;
+    font-size: 6px;
+    text-transform: uppercase;
+}
+
+
+/* NAV */
+header{
+    display: flex;
+    height: 100px;
+    width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav{
+    display: flex;
+}
+
+.left-nav{
+    margin-left: 100px;
+}
+
+.right-nav{
+    margin-left: 50px;
+}
+
+.left-nav ul,
+.right-nav ul{
+    padding: 0;
+    margin: 0;
+}
+
+.left-nav ul li,
+.right-nav ul li{
+    display: inline-block;
+    /* width: 120px; */
+    line-height: 65px;
+    text-align: center;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.left-nav ul li a{
+    font-size: 20px;
+    padding: 0 15px;
+    font-weight: 700;
+}
+
+.left-nav ul li:not(:last-child) a::after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #ddd;
+    top: 65px;
+    margin: 0 12px;
+}
+
+.right-nav ul li a{
+    font-size: 13px;
+    padding-left: 20px;
+    color: #777;
+    font-weight: 400;
+}
+
+.right-nav ul li:not(:last-child, :nth-child(4)) a::after{
+    content: "";
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    background-color: #ddd;
+    top: 60px;
+    margin: 0 12px;
+}
+
+.fa-magnifying-glass{
+    font-size: 20px;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+.left-nav ul li:hover{
+    border-bottom: 3px solid #006940;
+    transition: all 0.2s;
+}
+
+.left-nav ul li a:hover{
+    color:#006940;
+    transition: all 0.2s;
+}
+
+
+/* under-nav */
+.under-nav{
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    position: relative;
+    z-index: 100;
+    display: none;
+}
+
+
+/* .first-tab{
+    position: absolute;
+} */
+
+.under-nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.under-nav ul li.first-li,
+.under-nav ul li.last-li{
+    width: 30%;
+}
+
+.under-nav>ul>li{
+    width: 20%;
+}
+
+.under-nav ul li ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.under-nav ul .first-li{
+    margin-left: 0px;
+    text-align: center;
+}
+
+.under-nav ul li h1{
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.under-nav ul li p{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color:#777;
+}
+
+.under-nav ul li ul li a{
+    line-height: 100px;
+
+}
+
+.under-nav img{
+    display: inline-block;
+    width: 45px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.section1 img,
+.section2 img,
+.section3 img
+{
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.section1 a:hover,
+.section2 a:hover,
+.section3 a:hover{
+    font-weight: bold;
+}
+
+.last-li>p:first-child{
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+    color: #000;
+    font-weight: 700;
+}
+
+.green{
+    color: #006940;
+}
+
+.last-li .small{
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+}
+
+.last-li span.login{
+    border: 1px solid #ddd;
+    padding: 10px 37px;
+    margin-top: 30px;
+    margin-left: 25px;
+    display: inline-block;
+    font-weight: 500;
+    background-color: #006940;
+    color: white;
+}
+
+.last-li span.join{
+    border: 1px solid #ddd;
+    padding: 10px 30px;
+    font-weight: 500;
+}
+
+.last-li{
+    margin-right: 30px;
+}
+
+/* Slide영역 */
+
+.slider-box{
+    width: 1200px;
+    background-color: #fff;
+}
+
+
+.slider{
+    position: relative;
+    width: 1200px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.slider img{
+    position: absolute;
+    object-fit: cover;
+}
+
+.zindex2{
+    z-index: 2;
+}
+
+.zindex1{
+    z-index: 1;
+}
