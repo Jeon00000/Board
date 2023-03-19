@@ -2,31 +2,31 @@
 $(document).ready(function () {
 
     $('#summernote').summernote({
-        placeholder: '내용을 입력하세요',
-        height: 200,
+        placeholder: '댓글 쓰기',
+        height: 150,
         toolbar: [
-            ['fontname', ['fontname']],
-            ['fontsize', ['fontsize']],
-            ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
+            // ['fontname', ['fontname']],
+            // ['fontsize', ['fontsize']],
+            // ['style', ['style']],
+            // ['font', ['bold', 'underline', 'clear']],
+            // ['color', ['color']],
+            // ['para', ['ul', 'ol', 'paragraph']],
         ],
         fontNames: ['맑은 고딕', '궁서', '굴림체', '굴림', '돋움체', '바탕체'],
-        fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '24', '28', '30', '36', '50']
+        fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20']
     });
 
 
     // 로그인 스크립트
 
-    $('.test').click(function () {
-        $('#logpop').addClass('show');
+    $('.login-test').click(function () {
+        $('.login-dim').addClass('show');
     });
-    $('body').click(function (event) {
+    $('.login-dim').click(function (event) {
         console.log(event.target);
         // 테스트중
         if (event.target == this) {
-            $(".login-popup").removeClass('show');
+            $(".login-dim").removeClass('show');
 
         }
     });
@@ -55,7 +55,22 @@ $(document).ready(function () {
         });
     });
 
+    // 댓글버튼 누르기
+    const viewButtons = document.querySelectorAll("#post-list");
+    viewButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            // 해당 게시글의 정보를 가져옵니다.
+            const content = this.closest(".post-box").querySelector("pre").innerText;
+            const date = this.closest(".post-box").querySelector("#post-date").innerText;
+            // 게시글 보기 페이지에 정보를 삽입합니다.
+            document.querySelector("#view-date").innerText = date;
+            document.querySelector("#view-content").innerText = content;
 
+            // 게시글 보기 페이지를 표시합니다.
+            document.querySelector(".post-container").style.display = "none";
+            document.querySelector(".post-view").style.display = "flex";
+        });
+    });
 
 
 
