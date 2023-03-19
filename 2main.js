@@ -23,8 +23,6 @@ $(document).ready(function () {
         $('.login-dim').addClass('show');
     });
     $('.login-dim').click(function (event) {
-        console.log(event.target);
-        // 테스트중
         if (event.target == this) {
             $(".login-dim").removeClass('show');
 
@@ -71,6 +69,94 @@ $(document).ready(function () {
             document.querySelector(".post-view").style.display = "flex";
         });
     });
+
+    //글쓰기버튼-----------------------
+
+    // 게시글 정보를 저장할 객체 배열
+    let articles = [];
+
+    // 글쓰기 버튼 클릭 시
+    document.querySelector('.button-4').addEventListener('click', function (e) {
+        e.preventDefault();
+        const title = document.querySelector('.note-editable p').innerHTML;
+        if (!title) {
+            alert('내용을 입력해주세요.');
+            return;
+        }
+        const article = { title, id: Date.now() };
+        articles.push(article);
+        saveData();
+        renderList();
+        // document.querySelector('.note-editable p').innerHTML = '';
+    });
+    // 저장된 데이터 로드하기
+    function loadData() {
+        const data = localStorage.getItem('articles');
+        if (data) {
+            articles = JSON.parse(data);
+        }
+    }
+    // 데이터 저장하기
+    function saveData() {
+        localStorage.setItem('articles', JSON.stringify(articles));
+    }
+
+    // 리스트 렌더링하기
+    function renderList() {
+        const list = document.querySelector('#list');
+        list.innerHTML = '';
+        articles.forEach(function (article) {
+            const item = document.createElement('li');
+// ---------------------------------------------------
+            // Date를 게시글 작성시간으로 표시
+            // 게시글 작성 시간을 저장한 timestamp 값
+            const postTime = new Date(article.id); // timestamp
+            // 현재 시간을 가져옵니다.
+            const now = new Date();
+            // 게시글 작성 시간과 현재 시간의 차이를 계산합니다.
+            const timeDiff = now - postTime;
+            // 차이 값을 일, 시간, 분, 초로 계산합니다.
+            const day = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hour = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minute = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const second = Math.floor((timeDiff % (1000 * 60)) / 1000);
+            // 시간을 표시합니다.
+            const postDate = document.querySelector('#post-date');
+            if (day > 0) {
+                postDate.textContent = `${day}일 전`;
+            } else if (hour > 0) {
+                postDate.textContent = `${hour}시간 전`;
+            } else if (minute > 0) {
+                postDate.textContent = `${minute}분 전`;
+            } else {
+                postDate.textContent = `${second}초 전`;
+            }
+// -------------------------------------------------------
+            const link = document.createElement('p');
+            link.textContent = `${article.title}    ${postDate.textContent}`;
+            // link.setAttribute('href', `#${article.id}`);
+            item.appendChild(link);
+            const delButton = document.createElement('button');
+            delButton.textContent = '삭제';
+            delButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                const index = articles.findIndex(function (element) {
+                    return element.id === article.id;
+                });
+                if (index !== -1) {
+                    articles.splice(index, 1);
+                    saveData();
+                    renderList();
+                }
+            });
+            item.appendChild(delButton);
+            list.appendChild(item);
+        });
+    }
+
+
+    // --------------------글쓰기 버튼
+
 
 
 
