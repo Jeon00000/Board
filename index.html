@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap">
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/noticelist.js"></script>
+    <script src="js/hirelist.js"></script>
     <script src="js/script.js"></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     
@@ -46,7 +48,7 @@
                     </ul>
                 </div>
             </div>
-        </header>
+        
 
         <div class="under-nav">
             <ul class="first-tab">
@@ -84,7 +86,7 @@
                 </li>
             </ul>
         </div>
-    
+    </header>
 
         <div class="slider-box">
             <div class="slider">
@@ -98,6 +100,17 @@
 
     <!--------------------------------main ----------------------------------->
 
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
     <div class="container">
         <div class="main">
             <div class="row">
@@ -117,167 +130,40 @@
                     <div class="tab-content">
                     <div id="notice" class="active">
                         <ul class="i-list">
-                            <li class="s-list">
-                                <a href="2main.html">
-                                    <div class="inner">
-                                        <div class="cate">공지사항</div>
-                                        <div class="date"><i class="fa-regular fa-clock"></i> 2023-01-15</div>
-                                        <strong>
-                                            <span>희망 병원 홍길동 교수 <br> 우수연구 선정</span>
-                                        </strong>
-                                        <p>홍길동 교수 척추암연구에 크게 기여하여 우수연구로 선정되었다.</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="s-list">
-                                <a href="2main.html">
-                                    <div class="inner">
-                                        <div class="cate">공지사항</div>
-                                        <div class="date"><i class="fa-regular fa-clock"></i> 2023-01-15</div>
-                                        <strong>
-                                            <span>희망 병원 홍길동 교수 <br> 우수연구 선정</span>
-                                        </strong>
-                                        <p>홍길동 교수 척추암연구에 크게 기여하여 우수연구로 선정되었다.</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="s-list">
-                                <a href="2main.html">
-                                    <div class="inner">
-                                        <div class="cate">공지사항</div>
-                                        <div class="date"><i class="fa-regular fa-clock"></i> 2023-01-15</div>
-                                        <strong>
-                                            <span>희망 병원 홍길동 교수 <br> 우수연구 선정</span>
-                                        </strong>
-                                        <p>홍길동 교수 척추암연구에 크게 기여하여 우수연구로 선정되었다.</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="s-list">
-                                <a href="2main.html">
-                                    <div class="inner">
-                                        <div class="cate">공지사항</div>
-                                        <div class="date"><i class="fa-regular fa-clock"></i> 2023-01-15</div>
-                                        <strong>
-                                            <span>희망 병원 홍길동 교수 <br> 우수연구 선정</span>
-                                        </strong>
-                                        <p>홍길동 교수 척추암연구에 크게 기여하여 우수연구로 선정되었다.</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="s-list">
-                                <a href="#">
-                                    <div class="inner">
-                                        <div class="cate">공지사항</div>
-                                        <div class="date"><i class="fa-regular fa-clock"></i> 2023-01-15</div>
-                                        <strong>
-                                            <span>희망 병원 홍길동 교수 <br> 우수연구 선정</span>
-                                        </strong>
-                                        <p>홍길동 교수 척추암연구에 크게 기여하여 우수연구로 선정되었다.</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="s-list">
-                                <a href="#">
-                                    <div class="inner">
-                                        <div class="cate">공지사항</div>
-                                        <div class="date"><i class="fa-regular fa-clock"></i> 2023-01-15</div>
-                                        <strong>
-                                            <span>희망 병원 홍길동 교수 <br> 우수연구 선정</span>
-                                        </strong>
-                                        <p>홍길동 교수 척추암연구에 크게 기여하여 우수연구로 선정되었다.</p>
-                                    </div>
-                                </a>
-                            </li>
+                            <div id="row">
+                                <li class="s-list">
+                                    <a href="2main.html">
+                                        <div class="inner">
+                                            <div class="cate">공지사항</div>
+                                            <div class="date"><i class="fa-regular fa-clock"></i> 2023-01-15</div>
+                                            <strong>
+                                                <span>희망 병원 홍길동 교수 <br> 우수연구 선정</span>
+                                            </strong>
+                                            <p>홍길동 교수 척추암연구에 크게 기여하여 우수연구로 선정되었다.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </div>
                             
                         </ul>
                     </div>
 
                     <div id="hire">
                         <ul class="i-list">
-                            <li class="s-list">
-                                <a href="#">
-                                    <div class="inner">
-                                        <div class="cate2">채용공고</div>
-                                        <div class="date"><i class="fa-regular fa-clock"></i> 2023-01-15</div>
-                                        <strong>
-                                            <span>희망 병원 홍길동 교수 <br> 우수연구 선정</span>
-                                        </strong>
-                                        <p>홍길동 교수 척추암연구에 크게 기여하여 우수연구로 선정되었다.</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="s-list">
-                                <a href="#">
-                                    <div class="inner">
-                                        <div class="cate2">채용공고</div>
-                                        <div class="date"><i class="fa-regular fa-clock"></i> 2023-01-15</div>
-                                        <strong>
-                                            <span>희망 병원 홍길동 교수 <br> 우수연구 선정</span>
-                                        </strong>
-                                        <p>홍길동 교수 척추암연구에 크게 기여하여 우수연구로 선정되었다.</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="s-list">
-                                <a href="#">
-                                    <div class="inner">
-                                        <div class="cate2">채용공고</div>
-                                        <div class="date"><i class="fa-regular fa-clock"></i> 2023-01-15</div>
-                                        <strong>
-                                            <span>희망 병원 홍길동 교수 <br> 우수연구 선정</span>
-                                        </strong>
-                                        <p>홍길동 교수 척추암연구에 크게 기여하여 우수연구로 선정되었다.</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="s-list">
-                                <a href="#">
-                                    <div class="inner">
-                                        <div class="cate2">채용공고</div>
-                                        <div class="date"><i class="fa-regular fa-clock"></i> 2023-01-15</div>
-                                        <strong>
-                                            <span>희망 병원 홍길동 교수 <br> 우수연구 선정</span>
-                                        </strong>
-                                        <p>홍길동 교수 척추암연구에 크게 기여하여 우수연구로 선정되었다.</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="s-list">
-                                <a href="#">
-                                    <div class="inner">
-                                        <div class="cate2">채용공고</div>
-                                        <div class="date"><i class="fa-regular fa-clock"></i> 2023-01-15</div>
-                                        <strong>
-                                            <span>희망 병원 홍길동 교수 <br> 우수연구 선정</span>
-                                        </strong>
-                                        <p>홍길동 교수 척추암연구에 크게 기여하여 우수연구로 선정되었다.</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="s-list">
-                                <a href="#">
-                                    <div class="inner">
-                                        <div class="cate2">채용공고</div>
-                                        <div class="date"><i class="fa-regular fa-clock"></i> 2023-01-15</div>
-                                        <strong>
-                                            <span>희망 병원 홍길동 교수 <br> 우수연구 선정</span>
-                                        </strong>
-                                        <p>홍길동 교수 척추암연구에 크게 기여하여 우수연구로 선정되었다.</p>
-                                    </div>
-                                </a>
-                            </li>
-                            
+                            <div id="row2">
+                                <li class="s-list">
+                                    <a href="#">
+                                        <div class="inner">
+                                            <div class="cate2">채용공고</div>
+                                            <div class="date"><i class="fa-regular fa-clock"></i> 2023-01-15</div>
+                                            <strong>
+                                                <span>희망 병원 홍길동 교수 <br> 우수연구 선정</span>
+                                            </strong>
+                                            <p>홍길동 교수 척추암연구에 크게 기여하여 우수연구로 선정되었다.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </div>
                         </ul>
                         </div>
                     </div>
@@ -327,5 +213,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
-</html>
+</html

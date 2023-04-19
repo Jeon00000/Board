@@ -4,7 +4,7 @@ $(function(){
     $('.left-nav>ul li').hover(function(){
         $('.under-nav').stop().slideToggle(700);
 
-    });
+    })
     
     //main pop slide
 
@@ -12,7 +12,7 @@ $(function(){
     function myslide(){
       $('.slide').animate({
         'left': '-210px'
-      },500, function(){
+      },3000, function(){
         $('.slide img:first-child')
         .clone().appendTo('.slide');
         $('.slide img:first-child').remove();
@@ -22,6 +22,8 @@ $(function(){
     
 
 });//Jquery
+
+
 
 function fadeInOut(){
     $('.slider img:eq(0)')
@@ -33,11 +35,11 @@ function fadeInOut(){
 //main tab
 
 $('.tab a').click(function(e){
-    e.preventDefault();
-    $('.tab a').removeClass('active');
-    $(this).addClass('active');
-    const myid = $(this).data("idx");
-    $('.tab-content>div').removeClass('active');
-    $(myid).addClass('active');
-  })
+  e.preventDefault();
+  $('.tab a').removeClass('active');
+  $(this).addClass('active');
+  const myid = $(this).data("idx");
+  $('.tab-content>div').removeClass('active');
+  $(myid).addClass('active');
+});
   
