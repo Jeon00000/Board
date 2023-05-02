@@ -1,43 +1,27 @@
 $(function(){
-
-    //banner slide
-    $('.left-nav>ul li').hover(function(){
-        $('.under-nav').stop().slideToggle(700);
-
+    $('.gnb li').hover(function(){
+        $('.lnb').stop().slideToggle();
+        $('.nav-back').stop().slideToggle();
     });
-    
-    //main pop slide
 
-    setInterval(myslide,3000);
-    function myslide(){
-      $('.slide').animate({
-        'left': '-210px'
-      },500, function(){
-        $('.slide img:first-child')
-        .clone().appendTo('.slide');
-        $('.slide img:first-child').remove();
-        $('.slide').css('left',0);
-      })
-    }
-    
+    $('.lnb').hover(function(){
+        $('.lnb').stop().slideToggle();
+        $('.nav-back').stop().slideToggle();
+    });
 
-});//Jquery
+   
 
-function fadeInOut(){
-    $('.slider img:eq(0)')
-    .fadeOut(500).next()
-    .fadeIn(500).end()
-    .appendTo('.slider');
+});//jquery
+
+// 휴대폰 번호 자동으로 '-' 붙여주는 함수
+$(function(){
+    $('[type="date"]').prop('min', function(){
+        return new Date().toJSON().split('T')[0];
+    });
+});
+
+function oninputPhone(target) {
+    target.value = target.value
+        .replace(/[^0-9]/g, '')
+        .replace(/(^02.{0}|^01.{1}|[0-9]{3,4})([0-9]{4})([0-9]{4})/g, "$1-$2-$3");
 }
-
-//main tab
-
-$('.tab a').click(function(e){
-    e.preventDefault();
-    $('.tab a').removeClass('active');
-    $(this).addClass('active');
-    const myid = $(this).data("idx");
-    $('.tab-content>div').removeClass('active');
-    $(myid).addClass('active');
-  })
-  
