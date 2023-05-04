@@ -1,0 +1,301 @@
+*{box-sizing: border-box;}
+a{
+    text-decoration: none;
+    color: #000;
+}
+li{
+    list-style-type: none;
+}
+body{
+    background-color: #fff;
+    color:#000;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+}
+.container1{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* reservation */
+.reservation-top{
+    background: #f4f5f9;
+    border-bottom: 1px solid #dddddd;
+}
+.rs-top{
+    display: flex;
+    justify-content: space-between;
+}
+.rs-left{
+    display: flex;
+}
+.rs-left>div{
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.rs-left div:not(:first-child){
+    padding-right: 50px;
+}
+.rs-left span{
+    padding-left: 70px;
+}
+/* ul.gnb{
+    display: flex;
+    padding: 0;
+    margin: 0;
+} */
+/* ul.gnb li{
+    padding-right: 40px;
+    position: relative;
+} */
+
+/* search에 ul gnb가 있는데 이거 때문에 헤더 밀림, 어디에 쓰는 것인지, 현재 안 쓰는 것 같은데 맞는지?? */
+
+
+ul.gnb>li::after{
+    content: "";
+    width: 0.5px;
+    height: 17px;
+    background: #aaa;
+    position: absolute;
+    right: 23px;
+    top: 8px;
+}
+ul.lnb-a,
+ul.lnb-b{
+    position: absolute;
+    padding: 0;
+    top: 44px;
+    left: -22px;
+    background: #fff;
+    display: none;
+}
+ul.lnb-a li{
+    background: #fff;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    padding: 15px 50px 15px 23px;
+    
+}
+ul.lnb-a li:last-child{
+    border-bottom: 1px solid #000;
+}
+ul.lnb-b li{
+    background: #fff;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    padding: 15px 100px 15px 20px;
+}
+ul.lnb-b li:last-child{
+    border-bottom: 1px solid #000;
+}
+.rs-right{
+    display: flex;
+}
+.rs-right div{
+    padding: 20px;
+}
+.rs-right div:first-child{
+    background: #006940;
+}
+.rs-right div:last-child{
+    background: #8cc055;
+}
+.rs-right a{
+    color: #fff;
+    font-weight: bold;
+}
+/*  */
+.title{
+    text-align: center;
+    position: relative;
+}
+.title img{ 
+    height: 130px;
+    object-fit: cover;
+    position: absolute;
+    left: 310px;
+    top: 30px;
+    
+}
+.title h2{
+    padding-top: 120px;
+    margin-left: 130px;
+}
+.title h2::after{
+    content: "";
+    width: 310px;
+    height: 2px;
+    background: #006940;
+    position: absolute;
+    bottom: -5px;
+    left: 510px;
+}
+.main_title{
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 100px;
+}
+
+/* 진료과 */
+.main-box{
+    background: #eee;
+    height: 930px;
+}
+.box-item{
+    padding: 100px 70px 40px;
+}
+.box-item ul{
+    margin: 0;
+    padding: 0;
+}
+.box-item li{
+    float: left;
+    padding-left: 60px;
+    padding-bottom: 70px;
+}
+.part-item{
+    position: relative;
+}
+.part-name{
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    text-align: center;
+    padding: 40px 10px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.part-name img{
+    width: 80px;
+    height: 80px;
+}
+.part-name p{
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+}
+.part-hover{
+    width: 200px;
+    height: 200px;
+    background-color: #006940;
+    color: #fff;
+    text-align: center;
+    padding: 20px 30px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    display: none;
+}
+.part-hover h3{
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+.part-hover h3::after{
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: 125px;
+    left: 85px;
+}
+.part-sub{
+    display: flex;
+}
+.doc,
+.res{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.doc i,
+.res i{
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    background: #01462b;
+}
+.doc i:hover,
+.res i:hover{
+    color: #01462b;
+    background: #fff;
+}
+.doc p,
+.res p{
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+    font-size: 13px;
+}
+/************** footer ************/
+footer{
+    width: 100%;
+    height: 100%;
+    background-color: #3b3b3b;
+}
+.footer-link{
+    display: flex;
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #939393;
+}
+.footer-link>ul{
+    display: flex;
+    list-style: none;
+}
+.footer-link li{
+    position: relative;
+}
+.footer-link li:last-child{
+    color: rgb(0,105,64);
+    font-weight: bold;
+}
+.footer-link li:not(:last-child)::after{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #939393;
+    right: 9px;
+    top: 10px;
+}
+.footer-link li>a{
+    text-decoration: none;
+    color: #fff;
+    padding-right: 20px;
+    
+}
+.footer-link li:last-child>a,
+.footer-link li:nth-child(2)>a{
+    color: rgb(105, 225, 115);
+    font-weight: bold;
+}
+.link-site{
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 30px;
+}
+.link-site>div{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.footer-site{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.footer-site p{
+    color: #fff;
+}

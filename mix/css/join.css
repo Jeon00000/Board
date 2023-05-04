@@ -1,0 +1,314 @@
+.nav-bar{
+    width: 100%;
+    height: 50px;
+    background: #f4f5f9;
+}
+
+.nav-bar div{
+    display: flex;
+    flex-direction: row;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.bar1, .bar2{
+    margin: 0;
+    padding: 0;
+    line-height: 50px;
+}
+
+.bar1 a{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bar1 span{
+    padding: 0  15px;
+}
+
+.bar1{
+    position: relative;
+}
+
+.bar1 i::after{
+    content: "";
+    width: 1px;
+    height: 20px;
+    background-color: #999;
+    position: absolute;
+    top: 16px;
+    left: 55px;
+    z-index: 5;
+}
+
+
+div.bar2{
+    margin-left: 800px;
+}
+
+div.bar2 span{
+    width: 120px;
+    text-align: center;
+    background: #8cc055;
+}
+
+div.bar2 span:first-child{
+    width: 120px;
+    margin-left: 60px;
+    text-align: center;
+    background: #006940;
+}
+
+div.bar2 span a{
+    color: #fff;
+}
+
+
+
+/********************************************************/
+
+.join-inner{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.join-first{
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc; 
+}
+
+.join-first div{
+    margin-top: 80px;
+}
+
+.join-first p{
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 130px;
+    margin-bottom: 0;
+    
+}
+
+.join-first div span{
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.join-first div i:hover{
+    color: #8cc055;
+}
+
+/********************************************************/
+
+.join-second p{
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    color: #666;
+    text-align: center;
+}
+
+.join-second p:first-child{
+    margin-top: 80px;
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/********************************************************/
+
+.join-third{
+    display: flex;
+    flex-direction: row;
+}
+
+.join-third div{
+    width: 25%;
+    height: 150px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    position: relative;
+}
+
+
+.join-icon{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #eee;
+    position: absolute;
+    top: 35px;
+    left: 80px;
+}
+
+.join-icon i{
+    font-size: 40px;
+    line-height: 80px;
+    margin-left: 20px;
+}
+
+.join-third div span:nth-child(2){
+    margin-left: 120px;
+}
+
+.join-arrow{
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 50px;
+    right: -15px;
+    font-size: 24px;
+    color: #006940;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+/********************************************************/
+
+.join-form div p{
+    display: inline-block;
+    color: #002f31;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.join-form div p:last-child{
+    font-size: 14px;
+    color: #888;
+    font-weight: 300;
+    float: right;
+}
+
+.join-form div{
+    border-bottom: 3px solid #006940;
+}
+
+
+/********************************************************/
+.join-form-info ul{
+    margin: 0;
+    padding: 0;
+}
+
+.join-form-info ul li{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+    border-bottom: 1px solid #bbb;
+}
+
+.join-form-info ul li label{
+    display: inline-block;
+    width: 200px;
+    height: 79px;
+    background: #eee;
+    text-align: center;
+    line-height: 80px;
+    font-weight: 600;
+
+}
+.join-form-info ul li input{
+    display: inline-block;
+    width: 250px;
+    height: 35px;
+    margin-left: 50px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+.join-form-info ul li p{
+    margin: 0;
+    margin-left: 50px;
+    padding: 0;
+    font-size: 12px;
+}
+
+
+.join-form-under{
+    color: #002f31;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.join-form-under p{
+    margin-bottom: 5px;
+}
+
+.join-form-under div{
+    border-bottom: 3px solid #006940;
+}
+
+ul li span.a{
+    margin-left: 10px;
+}
+
+ul li input.a{
+    margin-left: 10px;
+}
+
+.button{
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+
+}
+
+button{
+    display: inline-block;
+    width: 120px;
+    height: 55px;
+    color: #333;
+    background: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #bbb;
+    margin-right: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    transition: all 0.3s;
+}
+
+button:last-child{
+    display: inline-block;
+    width: 150px;
+    height: 55px;
+    color: #fff;
+    background: #006940;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid #006940;
+    margin-right: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+button:hover{
+    border: 1px solid #006940;
+}
+
+button:last-child:hover{
+    background: #fff;
+    color: #006940;
+}

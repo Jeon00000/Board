@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>병원사이트 - 게시판 프로젝트</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/regular.min.css" integrity="sha512-3YMBYASBKTrccbNMWlnn0ZoEOfRjVs9qo/dlNRea196pg78HaO0H/xPPO2n6MIqV6CgTYcWJ1ZB2EgWjeNP6XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/join.css">
+    <link rel="stylesheet" href="css/list.css">
+</head>
+<body>
+    <!-- header -->
+<div class="container">
+  <header>
+      <div class="logo">
+          <p><span class="a">E</span><span class="b">Z</span></p>
+          <div class="name">
+              <a href="index.html"><p class="kr">이젠대학교병원</p>
+                  <p class="en">ezen university hospital</p></a>
+          </div>
+      </div>
+      <div class="nav">
+          <div class="left-nav">
+              <ul class="gnb">
+                  <li><a href="search.html">병원소개</a>
+                      <ul class="lnb">
+                          <li><a href="search.html">병원소개</a></li>
+                          <li><a href="search.html">의료진소개</a></li>
+                          <li><a href="search.html">찾아오시는 길</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="list.html">병원소식</a>
+                      <ul class="lnb">
+                          <li><a href="list.html">병원소식</a></li>
+                          <li><a href="list.html">공지사항</a></li>
+                          <li><a href="list.html">채용안내</a></li>
+                          
+                      </ul>
+                  </li>
+                  <li><a href="reservation.html">진료예약</a>
+                      <ul class="lnb">
+                          <li><a href="reservation.html">첫진료 예약</a></li>
+                          <li><a href="reservation.html">예약확인</a></li>
+                          <li><a href="reservation.html">전화문의</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="item.html">병원의료매장</a>
+                      <ul class="lnb">
+                          <li><a href="item.html">자체개발물품</a></li>
+                          <li><a href="item.html">편의시설</a></li>
+                          <li><a href="item.html">가까운 약국</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+          <div class="right-nav">
+              <ul>
+                  <li><a href="#">로그인</a></li>
+                  <li><a href="join.html">회원가입</a></li>
+                  <li><a href="#">그룹웨어</a></li>
+                  <li><a href="#">KOR
+                      <i class="fa-solid fa-caret-down"></i>
+                  </a></li>
+                  <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+              </ul>
+          </div>
+      </div>
+  </header>
+</div>
+<!-- header -->
+
+<div class="post-top-box">
+    <h1>이젠대학교병원 알림</h1>
+  </div>
+
+
+
+  <div class="post-container">
+    <!-- 게시글 -->
+    <div class="post-box">
+      <div class="post-avatar">
+        <img src="images/avatar2.png" alt="Avatar">
+      </div>
+      <div class="post-right">
+        <div class="post-top">
+          <div>이젠대학교병원</div>
+          <span id="post-date">5일전</span>
+        </div>
+        <div class="post-main">
+          <pre>코로나19 예방을 위해 저희 병원에서는 방문객분들 모두 체온측정🌡️과 마스크😷 착용을 꼭 권장합니다.
+만약 발열 또는 호흡기 증상이 있을 경우, 의사와 상담 후 진료를 받으실 수 있습니다.
+또한 대기실에서는 사회적 거리두기를 잘 지켜주시기 바랍니다.
+우리 모두가 안전하고 건강한 일상을 되찾기 위해 함께 노력합시다.
+저희 병원에서도 모든 시설과 인력을 동원하여 최선을 다하겠습니다.</pre>
+          <button type="button" class="post-btn">자세히 보기</button>
+        </div>
+        <div class="post-bottom">
+          <span id="post-list">댓글</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 게시글 -->
+    <div class="post-box">
+      <div class="post-avatar">
+        <img src="images/avatar.png" alt="Avatar">
+      </div>
+      <div class="post-right">
+        <div class="post-top">
+          <div>이젠대학교병원</div>
+          <span id="post-date">3주 전</span>
+        </div>
+        <div class="post-main">
+          <pre>이젠대학교병원에서 다음 주에 건강강연을 개최합니다.
+이번 강연은 '스트레스 관리와 정신건강’이라는 주제로 진행되며, 저희 병원의 정신과 전문의가
+강사로 나섭니다. 강연은 오후 2시부터 4시까지 진행되며, 무료로 참여할 수 있습니다.
+관심있으신 분들은 인터넷이나 전화로 사전 신청해주시기 바랍니다.</pre>
+          <button type="button" class="post-btn">자세히 보기</button>
+        </div>
+        <div class="post-bottom">
+          <span id="post-list">댓글</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 게시글 -->
+    <div class="post-box">
+      <div class="post-avatar">
+        <img src="images/avatar2.png" alt="Avatar">
+      </div>
+      <div class="post-right">
+        <div class="post-top">
+          <div>이젠대학교병원</div>
+          <span id="post-date">4개월 전</span>
+        </div>
+        <div class="post-main">
+          <pre>안녕하세요. 이젠대학교병원병원입니다.
+건강한 식습관은 건강한 삶의 기본입니다. 이번에는 당신이 먹는 음식에 대해 더 알아보는 시간을
+가져보는 건 어떨까요?
+저희 병원에서는 영양사 상담을 통해 개인의 건강 목표에 맞춘 올바른 식습관을 제공합니다.
+좀 더 건강한 삶을 위해 지금 바로 상담을 신청해보세요.</pre>
+          <button type="button" class="post-btn">자세히 보기</button>
+        </div>
+        <div class="post-bottom">
+          <span id="post-list">댓글</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 게시글 -->
+    <div class="post-box">
+      <div class="post-avatar">
+        <img src="images/avatar.png" alt="Avatar">
+      </div>
+      <div class="post-right">
+        <div class="post-top">
+          <div>이젠대학교병원</div>
+          <span id="post-date">4개월 전</span>
+        </div>
+        <div class="post-main">
+          <pre>🏥 저희 병원은 최신 시설과 전문 의료진을 갖춘 종합병원으로, 언제나 최상의 서비스를 제공합니다.
+내과, 외과, 정형외과, 신경외과, 소아과등 다양한 진료과목을 운영하고 있습니다.
+⏰ 월~금 오전 9시부터 오후 6시까지, 토요일은 오전 9시부터 오후 1시까지 진료시간을 운영합니다.
+인터넷이나 전화를 통해 예약이 가능하니, 언제든지 편리하게 예약해주세요!</pre>
+          <button type="button" class="post-btn">자세히 보기</button>
+        </div>
+        <div class="post-bottom">
+          <span id="post-list">댓글</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 게시글 -->
+    <div class="post-box">
+      <div class="post-avatar">
+        <img src="images/avatar.png" alt="Avatar">
+      </div>
+      <div class="post-right">
+        <div class="post-top">
+          <div>이젠대학교병원</div>
+          <span id="post-date">5개월 전</span>
+        </div>
+        <div class="post-main">
+          <pre>🎁 이젠대학병원 신규 회원 가입 이벤트! 🎁
+처음 가입하시는 분들께만!
+💰 첫 진료비 10% 할인 쿠폰
+💰 건강검진 패키지 20% 할인 쿠폰
+그리고 추천인 이벤트도 진행 중! 🤝
+친구나 가족을 추천해주신 분들께도 동일한 혜택 제공!
+기간은 2023년 4월 31일까지! 📅
+이젠대학병원에서 더욱 편리하고 저렴한 건강 서비스를 받으세요! 💙</pre>
+          <button type="button" class="post-btn">자세히 보기</button>
+        </div>
+        <div class="post-bottom">
+          <span id="post-list">댓글</span>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- 댓글기능 테스트중 -->
+  <div class="post-container post-view">
+
+    <div class="post-box view-box">
+      <div class="comment-up">
+        <div class="post-avatar">
+          <img src="images/avatar2.png" alt="Avatar">
+        </div>
+        <div class="post-right">
+          <div class="post-top">
+            <div>이젠대학교병원</div>
+            <span id="view-date">며칠전</span>
+          </div>
+          <div class="post-main">
+            <pre id="view-content">내용</pre>
+            <button type="button" class="post-btn">자세히 보기</button>
+          </div>
+        </div>
+      </div>
+      <!-- 서머노트 -->
+      <div class="comment-down">
+        <form method="post" class="view-comment"><label for="summernote">내용</label>
+          <textarea id="summernote" name="editordata"></textarea>
+          <button type="button" class="button-4" role="button">글쓰기</button>
+        </form>
+        <ol id="list"></ol>
+      </div>
+    </div>
+  </div>
+
+<!-- footer -->
+<footer>
+    <div class="container">
+        <div class="footer-link">
+            <ul>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">환자권리장전</a></li>
+                <li><a href="#">병원윤리강령</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">찾아오시길</a></li>
+                <li><a href="#">전화번호안내</a></li>
+                <li><a href="#">비급여안내</a></li>
+            </ul>
+            <div class="link-site">
+                <div class="blog">
+                    <a href="#"><img src="images/blog.png" alt="blog"></a>
+                </div>
+                <div class="instargram">
+                    <a href="#"><img src="images/instargram.png" alt="instargram"></a>
+                </div>
+                <div class="youtube">
+                    <a href="#"><img src="images/youtube.png" alt="youtube"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-site">
+            <p>(12345) 희망광역시 희망구 희망동로 123</p>
+            <p>희망대학교병원 대표전화: 1111-1234 응급센터: 000-000-1234,1235</p>
+            <p>copyright(c) 2023. WISH UNIVERSITY HOSPITAL. ALL RIGHTS RESERVED.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/list.js"></script>
+</body>
+</html>
